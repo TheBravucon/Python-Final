@@ -1,7 +1,8 @@
 import tkinter as tk
 
+
 class Frame:
-    def __init__(self):
+    def __init__(self, input_config, bg, title, icon, config, geometry):
         self.__font = 'Arial'
         self.__input_config = {'padx': 5, 'pady': 5, 'bg': 'lightgray', 'font': (self.__font, 10)}
         self.__root_bg = 'green'

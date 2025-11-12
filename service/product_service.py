@@ -3,8 +3,7 @@ from tkinter import messagebox
 
 from db.queries import *
 from ui.ventana_lista_productos import VentanaListaProductos
-from ui.ventana_productos import VentanaProductos, get_nombre_producto, get_precio_producto, get_cantidad
-
+from ui.ventana_productos import VentanaProductos
 
 class ProductService:
     def __init__(self, db):
@@ -22,9 +21,9 @@ class ProductService:
         return self.ventana_lista_productos
 
     def crear_producto(self):
-        name_product = self.ventana_productos.get_nombre_producto()
-        amount_product = self.ventana_productos.get_precio_producto()
-        price_product = self.ventana_productos.get_cantidad()
+        name_product = self.ventana_productos.get_nombre_producto().get()
+        amount_product = self.ventana_productos.get_cantidad().get()
+        price_product = self.ventana_productos.get_precio_producto().get()
 
         if name_product == "" or amount_product == 0.0 or price_product == 0.0:
             print("Error: Todos los campos son obligatorios.")
@@ -40,6 +39,12 @@ class ProductService:
         action = 'editado' if self.editing else 'creado'
         tk.messagebox.showinfo(title=f"Producto {action}", message=f"El producto fue {action} con exito")
         self.reset_form()
+
+    def editar_producto(self, id):
+        print(f"Editando producto id: {id}")
+
+    def borrar_producto(self, id):
+        print(f"Borrando producto id: {id}")
 
     def reset_form(self):
         self.ventana_productos.get_nombre_producto().set("")
