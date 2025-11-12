@@ -1,0 +1,5 @@
+ACTUALIZAR_PRODUCTOS = 'UPDATE productos SET description = ?, precio = ?, cantidad = ? WHERE id = ?'
+CREAR_PRODUCTOS = 'INSERT INTO productos (descripcion, precio, cantidad) VALUES (?, ?, ?)'
+BORRAR_PRODUCTOS = 'DELETE FROM productos WHERE id = ?'
+BUSCAR_TODOS_PRODUCTOS = 'SELECT * FROM productos'
+FETCH_PRODUCTOS = 'SELECT * FROM productos WHERE id = ?'

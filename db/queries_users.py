@@ -1,0 +1,5 @@
+ACTUALIZAR_PRODUCTOS = 'UPDATE usuarios SET nombre = ?, contrasenia = ? WHERE id = ?'
+CREAR_PRODUCTOS = 'INSERT INTO usuarios (nombre, contrasenia) VALUES (?, ?, ?)'
+BORRAR_PRODUCTOS = 'DELETE FROM usuarios WHERE id = ?'
+BUSCAR_TODOS_USERS = 'SELECT * FROM usuarios'
+FETCH_USERS = 'SELECT * FROM usuarios WHERE user_id = ?'
