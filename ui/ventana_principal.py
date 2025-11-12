@@ -20,6 +20,7 @@ class VentanaPrincipal:
         self.__crear_producto_button = Button(self.get_ventana(), 'Crear Producto', self.__service.open_products_window)
         self.__mostrar_productos_button = Button(self.get_ventana(), 'Mostrar todos los productos',
                                                  self.__service.open_all_products_window)
+        self.__mostrar_carrito_button = Button(self.get_ventana(), 'Comprar productos', self.__service.open_carrito_window)
 
     def open_popup(self, popup):
         self.__popup = popup

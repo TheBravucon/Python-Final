@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 
 from db.queries import *
+from ui.ventana_carrito import VentanaCarrito
 from ui.ventana_lista_productos import VentanaListaProductos
 from ui.ventana_productos import VentanaProductos
 
@@ -10,6 +11,7 @@ class ProductService:
         self.__db = db
         self.ventana_productos = None
         self.ventana_lista_productos = None
+        self.ventana_carrito = None
         self.editing = False
 
     def open_ventana_productos(self):
@@ -19,6 +21,10 @@ class ProductService:
     def open_ventana_lista_productos(self):
         self.ventana_lista_productos = VentanaListaProductos(self)
         return self.ventana_lista_productos
+
+    def open_ventana_carrito(self):
+        self.ventana_carrito = VentanaCarrito(self)
+        return self.ventana_carrito
 
     def crear_producto(self):
         name_product = self.ventana_productos.get_nombre_producto().get()

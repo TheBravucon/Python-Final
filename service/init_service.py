@@ -17,3 +17,6 @@ class InitService:
 
     def open_all_products_window(self):
         self.__ventana_principal.open_popup(self.__product_service.open_ventana_lista_productos())
+
+    def open_carrito_window(self):
+        self.__ventana_principal.open_popup(self.__product_service.open_ventana_carrito())
